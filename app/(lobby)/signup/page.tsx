@@ -11,7 +11,7 @@ import { Label } from "@/components/ui/label";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Login() {
+export default function Signup() {
   return (
     <div className="h-screen w-screen flex justify-center items-center text-center px-4">
       <Card className="w-[400px]">
@@ -23,24 +23,28 @@ export default function Login() {
             height={100}
           />
           <CardDescription>
-            おかえりなさい！ゲームを始めましょう！！
+            はじめまして！ゲームを始めましょう！！
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-2">
           <div className="space-y-1 flex flex-col items-start">
+            <Label htmlFor="username">Username</Label>
+            <Input id="current" type="text" />
+          </div>
+          <div className="space-y-1 flex flex-col items-start">
             <Label htmlFor="email">Email</Label>
-            <Input id="email" />
+            <Input id="email" type="text" />
           </div>
           <div className="space-y-1 flex flex-col items-start">
             <Label htmlFor="password">Password</Label>
-            <Input id="password" />
+            <Input id="password" type="password" />
           </div>
         </CardContent>
         <CardFooter className="flex flex-col">
-          <Button>ログイン</Button>
-          <div className="py-2">アカウントをお持ちでないですか？<br />
-            新規登録は
-            <Link href="/signup" className="text-blue-600">
+          <Button>新規登録</Button>
+          <div className="py-2">既にアカウントをお持ちですか？<br />
+            ログインは
+            <Link href="/login" className="text-blue-600">
             こちら
             </Link>
           </div>
